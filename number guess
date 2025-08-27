@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //Random Seed
+    srand(static_cast<unsigned int>(time(0)));
+
+    int secretnumber = rand() % 100 + 1;
+    int guess = 0;
+    cout<<"I have chosen a number between 1 and 100:"<<endl;
+    cout<<"Can you guess what it is?"<<endl;
+    
+    while (guess != secretnumber)
+    {
+        cout<<"Enter your guess:";
+        cin>>guess;
+
+        if(guess > secretnumber) 
+        {
+            cout<<"Too high! Try again."<<endl;
+        }
+        else if(guess < secretnumber)
+        {
+            cout<<"Too low! Try again."<<endl;
+        }
+        else
+        {
+            cout<<"Congratulaations! You guessed my number!"<<endl;
+        }
+    }
+
+    return 0;
+}
